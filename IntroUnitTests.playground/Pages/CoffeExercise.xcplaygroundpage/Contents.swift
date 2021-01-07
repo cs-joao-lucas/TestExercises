@@ -1,4 +1,5 @@
 import Foundation
+import XCTest
 
 struct Coffe {
     var haveMilk: Bool
@@ -16,3 +17,22 @@ class CoffeMaker {
     }
 
 }
+
+class CoffeMakerTestCase: XCTestCase {
+    
+    func testMakeLatter() {
+        let coffeLatter = CoffeMaker.makeLatte()
+        
+        XCTAssertTrue(coffeLatter.haveMilk)
+        XCTAssertFalse(coffeLatter.isStrong)
+    }
+    
+    func testMakeExpresso() {
+        let coffeMakeEspresso = CoffeMaker.makeEspresso()
+        
+        XCTAssertFalse(coffeMakeEspresso.haveMilk)
+        XCTAssertTrue(coffeMakeEspresso.isStrong)
+    }
+}
+
+CoffeMakerTestCase.defaultTestSuite.run()

@@ -35,15 +35,18 @@ class ReminderTestCase: XCTestCase {
         super.tearDown
     }
 
-    func testNotTime() {
-        let remind = sut.reminders.first!
+    func testNotTime() throws {
+        let remind = try XCTUnwrap(sut.reminders.first)
         remind.time = 15
 
         XCTAssertFalse(remind.shouldTakePill())
     }
 
     func testIsTime() {
-        let remind = sut.reminders.first!
+        guard let remind = sut.reminders.first else {
+            return XCTFail("Expected one number")
+        }
+    
         remind.time = 6
 
         XCTAssertTrue(remind.shouldTakePill())

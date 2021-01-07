@@ -36,7 +36,27 @@ class ValidatorTestCase: XCTestCase {
         // Assert
         XCTAssertTrue(result)
     }
+    
+    func testValidNumber() {
+        let number = 4
+        let result = sut.isValid(number: number)
+        
+        XCTAssertTrue(result)
+    }
+    
+    func testInvalidText() {
+        let text = String(repeating: "", count: 10)
+        let result = sut.isValid(text: text)
+        
+        XCTAssertFalse(result)
+    }
 
+    func testInvalidNumber() {
+        let number = 9
+        let result = sut.isValid(number: number)
+        
+        XCTAssertFalse(result)
+    }
 }
 
 ValidatorTestCase.defaultTestSuite.run()

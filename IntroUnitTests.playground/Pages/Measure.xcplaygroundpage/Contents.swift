@@ -11,17 +11,15 @@ class SomeMeasureClass {
     var some = [SomeStruct]()
 
     init() {
-        for i in 0...1000 {
+        for i in 0...5000 {
             some.append(SomeStruct(id: i, name: "Name\(i)"))
         }
     }
 
     func allIds() -> [Int] {
-        var ids = [Int]()
-        for i in 0..<some.count {
-            ids.append(some[i].id)
+        return some.map {
+            $0.id
         }
-        return ids
     }
 
 }
