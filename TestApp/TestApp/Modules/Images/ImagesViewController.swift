@@ -75,8 +75,9 @@ extension ImagesViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? ImagesViewTableViewCell,
-            let image = cell.photoImageView.image {
+        if let cell = tableView.cellForRow(at: indexPath) as? ImagesViewTableViewCell
+           {
+            let image = cell.photoImageView.image ?? UIImage()
             navigationController?.pushViewController(ImageViewController(image: image), animated: true)
         }
     }
