@@ -32,6 +32,8 @@
 		A647696125A77C8C0074F2F2 /* ImagesServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A647696025A77C8C0074F2F2 /* ImagesServiceSpec.swift */; };
 		A647696A25A77D5E0074F2F2 /* APIClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A647696925A77D5E0074F2F2 /* APIClientStub.swift */; };
 		A647697025A787A60074F2F2 /* URLBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A647696F25A787A60074F2F2 /* URLBuilderSpec.swift */; };
+		A647697425A78A940074F2F2 /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A647697325A78A940074F2F2 /* URLSessionStub.swift */; };
+		A647697A25A78CBD0074F2F2 /* APIClientDefaultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A647697925A78CBD0074F2F2 /* APIClientDefaultSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		A647696025A77C8C0074F2F2 /* ImagesServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesServiceSpec.swift; sourceTree = "<group>"; };
 		A647696925A77D5E0074F2F2 /* APIClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientStub.swift; sourceTree = "<group>"; };
 		A647696F25A787A60074F2F2 /* URLBuilderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilderSpec.swift; sourceTree = "<group>"; };
+		A647697325A78A940074F2F2 /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
+		A647697925A78CBD0074F2F2 /* APIClientDefaultSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientDefaultSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,8 @@
 			children = (
 				A647695D25A77C5D0074F2F2 /* ImagesService */,
 				A647696F25A787A60074F2F2 /* URLBuilderSpec.swift */,
+				A647697325A78A940074F2F2 /* URLSessionStub.swift */,
+				A647697925A78CBD0074F2F2 /* APIClientDefaultSpec.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -382,9 +388,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A647697425A78A940074F2F2 /* URLSessionStub.swift in Sources */,
 				A647697025A787A60074F2F2 /* URLBuilderSpec.swift in Sources */,
 				A647696A25A77D5E0074F2F2 /* APIClientStub.swift in Sources */,
 				A647696125A77C8C0074F2F2 /* ImagesServiceSpec.swift in Sources */,
+				A647697A25A78CBD0074F2F2 /* APIClientDefaultSpec.swift in Sources */,
 				A647695425A77BAA0074F2F2 /* TestAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
