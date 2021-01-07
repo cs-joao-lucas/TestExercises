@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Photo: Decodable {
+struct Photo: Codable {
     var urls: ImageURL
 }
 
-struct ImageURL: Decodable {
+struct ImageURL: Codable {
     var small: String
 }
