@@ -16,6 +16,11 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_12.3.app
 
+    - name: Install Cocoapods
+      run: |
+        cd TestApp
+        pod install
+
     - name: Build and test
       run: xcodebuild clean build test -project TestApp/TestApp.xcodeproj -scheme "CI" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 8" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 
